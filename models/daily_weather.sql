@@ -7,7 +7,7 @@ with
 
     daily_weather_agg as (
         select
-            daily_weather,
+            DATEADD(year, 5, daily_weather) as daily_weather,
             weather,
             round(avg(temp),2) as avg_temp, 
             round(avg(pressure),2) as avg_pressure, 
